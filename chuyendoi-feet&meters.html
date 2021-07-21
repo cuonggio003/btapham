@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi feet và meters</title>
+</head>
+<body>
+<!--    Tao ô nhập dữ liệu-->
+<input type="text" id="input">
+<select id="too">
+    <option value="met" >met</option>
+    <option value="feet" >feet</option>
+</select>
+sang
+<select id="test">
+    <option value="met">met</option>
+    <option value="feet">feet</option>
+</select>
+<input type="button" id="ad" value="Click" onclick="ham()">
+<p id="display"></p>
+
+<script>
+    function ham() {
+       let display = document.getElementById("result")
+        let a = +document.getElementById("input").value;
+        let b = document.getElementById("too").value;
+        let c = document.getElementById("test").value;
+        if (b === 'met' && c === 'feet') {
+            display = 0.305 * a;
+        } else if (b === 'feet' && c === 'met') {
+            display = 3.279 * a;
+        }
+        document.getElementById("display").innerHTML=display
+    }
+
+</script>
+</body>
+</html>
